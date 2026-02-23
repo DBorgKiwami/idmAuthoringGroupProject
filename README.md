@@ -1,10 +1,10 @@
 # idmAuthoringGroupProject
 
 ## Backend Developers
-Daniel, Astrid
+Daniel, Astrid (on support), Elena
 
 ## Frontend Developers
-Astrid, Dhanashri
+Astrid, Dhanashri, Ester
 
 ## Managing Git
 Daniel

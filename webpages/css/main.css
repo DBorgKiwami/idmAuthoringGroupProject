@@ -13,6 +13,12 @@ body {
   margin: 0 auto;
 }
 
+nav {
+  position: sticky;
+  top: 0;
+  padding: 10px 10px;
+}
+
 /* Header styling */
 header {
   display: flex;

@@ -12,6 +12,6 @@ Daniel
 # To-do
 ## Website name
 ## Logo
-## Template which all pages follow (DO NOT MAKE ANY OTHER PAGES BEFORE COMPLETION OF TEMPLATE!)
-## CSS File
+## Individual Hospital Page
+## Better CSS (Eventually)
 ## Information page for getting help (GP Referral, etc) (WIREFRAME ONLY) 

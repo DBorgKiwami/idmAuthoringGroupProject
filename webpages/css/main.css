@@ -13,10 +13,13 @@ body {
   margin: 0 auto;
 }
 
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
 nav {
-  position: sticky;
-  top: 0;
-  padding: 10px 10px;
+  
 }
 
 /* Header styling */
@@ -24,6 +27,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 10px 10px;
 }
 
 .logo-text {

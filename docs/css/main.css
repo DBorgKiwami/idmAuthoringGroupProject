@@ -62,6 +62,11 @@ hr {
   width: 100%;
 }
 
+.map {
+  height: 220px;
+  width: 300px;
+}
+
 /* The emergency button */
 .emergency-btn {
   background-color: #f84141;

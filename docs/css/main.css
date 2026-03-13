@@ -8,6 +8,12 @@ body {
   color: #333;
 }
 
+.hospitalimage {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+
 .container {
   max-width: 900px;
   margin: 0 auto;

@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --brand-color: #14591d;
+  --accent-color: #606b24;
+  --emergency-color: #fb3640;
+  --positive-color: #31a241;
+  --text-color: #000000;
+  --body-color: #ffffff;
+
+  --border-color: #e2e8f0;
+  --text-muted: #64748b;
+  --bg-light: #f8fafc;
+  --bg-page: #f1f5f9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  color: var(--text-color);
+  line-height: 1.7;
+  background-color: var(--bg-page);
+  padding: 3rem 2rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--body-color);
+  border-radius: 20px;
+  padding: 3rem 4rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+}
+
+.hero-header {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-image: url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000"); /* 医院背景占位图 */
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.9) 30%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--brand-color);
+  letter-spacing: -0.5px;
+}
+
+.search-bar {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  padding: 0.5rem 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 180px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin-bottom: 5rem;
+  padding: 1rem 0;
+}
+
+.hero-text {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--brand-color);
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 90%;
+  margin-bottom: 1rem;
+}
+
+.btn-emergency {
+  width: fit-content;
+  background-color: var(--emergency-color);
+  color: var(--body-color);
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(241, 60, 77, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-emergency:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(241, 60, 77, 0.3);
+  filter: brightness(1.1);
+}
+
+.hero-map-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 400px;
+}
+
+.map-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--bg-light);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.02);
+  position: relative;
+  overflow: hidden;
+}
+
+.map-placeholder::before {
+  content: "🗺️";
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.map-legend {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background: var(--bg-light);
+  border-radius: 12px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.map-legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-closed {
+  color: var(--emergency-color);
+  font-weight: 700;
+}
+.legend-open {
+  color: var(--positive-color);
+  font-weight: 700;
+}
+.legend-here {
+  color: var(--brand-color);
+  font-weight: 700;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 3.5rem 0;
+}
+
+/* --- Insurance Tabs Section --- */
+.insurance-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tabs-container {
+  display: flex;
+  background-color: var(--bg-light);
+  border-radius: 50px;
+  padding: 0.4rem;
+  margin-bottom: 2rem;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.tab-btn {
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.tab-btn.inactive {
+  color: var(--text-muted);
+}
+
+.tab-btn.inactive:hover {
+  color: var(--text-color);
+}
+
+.tab-btn.active {
+  background-color: var(--brand-color);
+  color: var(--body-color);
+  box-shadow: 0 4px 10px rgba(21, 99, 41, 0.2);
+}
+
+.tab-content {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.tab-content p {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.features-box {
+  background-color: var(--bg-light);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.features-box strong {
+  color: var(--text-color);
+}
+
+.features-box ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.features-box li {
+  margin-bottom: 0.8rem;
+}
+
+/* --- Footer --- */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--brand-color);
+}

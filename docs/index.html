@@ -3,53 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template for hospital website</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
+    <title>Dublin Medical Hub</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- header -->
-    <header>
-      <a href="index.html"><img src="images/Logo_Vector_Image_SVG.svg" class="logo"/></a>
-      <h1><a href="index.html">Website</a></h1>
-      <input type="search" placeholder="search" />
-      <nav>
-        <ul>
-          <li>Language toggle</li>
-          <li>Setting</li>
-        </ul>
-      </nav>
-    </header>
-    <!-- emergency and map -->
-    <main>
-      <section class="main">
-        <div class="emergency">
-          <h2>title</h2>
-          <p>content</p>
-          <button>Emergency</button>
+    <div class="container">
+      <header class="hero-header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+          <div class="logo-container">
+            <img src="./logo.jpeg" alt="Logo" class="header-logo" />
+            <h1 class="logo-text">Dublin Medical Hub</h1>
+          </div>
+          <div class="header-controls">
+            <div class="search-bar">
+              <input type="text" placeholder="Search..." />
+              <button class="search-btn">🔍</button>
+            </div>
+          </div>
+          <div class="nav-links">
+            <a href="#">Language</a>
+            <a href="#">Settings</a>
+          </div>
         </div>
-        <div id="map" class="map"></div>
-      </section>
-      <!-- insurance information -->
-      <section>
-        <button id="eu">eu health insurance</button>
-        <button id="non-eu">non-eu health</button>
-        <p>content</p>
-      </section>
-    </main>
-    <!-- footer -->
-    <footer>
-      <a href="hospital.html">Temporary Hospital Page Example Link</a>
-      <a href="url">page2</a>
-      <a href="url">page3</a>
-    </footer>
-    <script src="homepagemap.js"></script>
+      </header>
+
+      <main>
+        <section class="hero-section">
+          <div class="hero-text">
+            <h2>Immediate Care When Every Second Counts</h2>
+            <p>
+              Our Emergency Department provides 24/7 critical support for
+              life-threatening conditions and acute injuries. If you are
+              experiencing a medical emergency, please dial 999 or 112
+              immediately or proceed to our emergency entrance.
+            </p>
+            <button class="btn-emergency">EMERGENCY</button>
+          </div>
+          <div class="hero-map-container">
+            <div class="map-placeholder">
+              <img
+                src="./mapplaceholder.png"
+                alt="Map Placeholder"
+                class="map-image"
+              />
+            </div>
+            <!-- <div class="map-legend">
+              <span class="legend-closed">❌ CLOSED</span>
+              <span class="legend-open">✅ OPEN</span>
+              <span class="legend-here">📍 YOUR ARE HERE</span>
+            </div> -->
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section class="insurance-section">
+          <div class="tabs-container">
+            <button class="tab-btn inactive">EU Health Insurance</button>
+            <button class="tab-btn active">Non-EU Health Insurance</button>
+          </div>
+          <div class="tab-content">
+            <p>
+              The EHIC allows anyone insured by a statutory health insurance
+              scheme in an EU member state, Iceland, Liechtenstein, Norway, or
+              Switzerland to access medically necessary, state-provided
+              healthcare during a temporary stay.
+            </p>
+            <div class="features-box">
+              <strong>Key Features:</strong>
+              <ul>
+                <li>
+                  <strong>Coverage:</strong> It provides treatment under the
+                  same conditions and at the same cost (free in some countries)
+                  as people insured in that country.
+                </li>
+                <li>
+                  <strong>Limitations:</strong> It is not a substitute for
+                  travel insurance. It does not cover private healthcare or
+                  costs such as mountain rescue or being flown back to your home
+                  country.
+                </li>
+                <li>
+                  <strong>Validity:</strong> It only covers state-funded
+                  providers and is intended for short-term stays (like tourism
+                  or exchange programs).
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <hr class="divider" />
+      </main>
+
+      <footer>
+        <div class="footer-col">
+          <a href="#">Home / About Us</a>
+          <a href="#">Hospital Directory</a>
+        </div>
+        <div class="footer-col">
+          <a href="#">Insurance Guide (EHIC)</a>
+          <a href="#">Emergency Contacts</a>
+        </div>
+        <div class="footer-col">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
-
-

@@ -19,6 +19,7 @@ function searchHospital(){
                     let templateCopy = searchtemplate.content.cloneNode(true).children[0]
                     console.log(templateCopy)
                     templateCopy.innerHTML = data.hospitals[i].name
+                    templateCopy.href = "./hospital_page.html?hospital_id=" + i
                     searchoutput.appendChild(templateCopy)
                 }
             }

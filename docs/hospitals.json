@@ -1,0 +1,7 @@
+{
+"hospitals":[
+    {"lat":53.33977105427492, "lon":-6.2949987583892755, "name":"St James' Hospital", "hours": {"opening": 1000, "closing": 1800}, "website":"www.google.com"},
+    {"lat":53.29132754809115, "lon":-6.378530200719999, "name":"Tallaght University Hospital", "hours": {"opening": 1000, "closing": 1800}, "website":"www.google.com"},
+    {"lat":53.43977105427492, "lon":-6.3049987583892755, "name":"St Mario's Big Suprise", "hours": {"opening": 1000, "closing": 1800}, "website":"www.google.com"}
+]
+}

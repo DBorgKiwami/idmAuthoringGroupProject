@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dublin Medical Hub</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- Code for Leaflet Map -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
   </head>
   <body>
-    <div class="container">
       <header class="hero-header">
         <div class="header-overlay"></div>
         <div class="header-content">
@@ -25,9 +28,8 @@
           <div class="header-controls">
             <div class="search-bar">
               <input type="text" placeholder="Search..." id="search-bar" />
-              <button class="search-btn">🔍</button>
-              <div id="search-output" class="search-result-container">
-              </div>
+              <button class="search-btn" aria-label="Search"></button>
+              <div id="search-output" class="search-result-container"></div>
             </div>
           </div>
           <div class="nav-links">
@@ -38,86 +40,67 @@
       </header>
 
       <main>
-        <section class="hero-section">
-          <div class="hero-text">
-            <h2>Immediate Care When Every Second Counts</h2>
-            <p>
-              Our Emergency Department provides 24/7 critical support for
-              life-threatening conditions and acute injuries. If you are
-              experiencing a medical emergency, please dial 999 or 112
-              immediately or proceed to our emergency entrance.
-            </p>
-            <button class="btn-emergency">EMERGENCY</button>
-          </div>
-          <div class="hero-map-container">
-            <div id="map" class="map">
+        <div class="container">
+          <section class="hero-section">
+            <div class="hero-text">
+              <h2>Immediate Care When Every Second Counts</h2>
+              <p>
+                If you require immediate assistance, please click the 'Emergency' button below. Our system will automatically detect your location to recommend the most suitable hospitals and clinics in your vicinity. For any other inquiries, please do not hesitate to contact our support team at any time.
+              </p>
+              <button class="btn-emergency">EMERGENCY</button>
             </div>
-            <!-- <div class="map-legend">
+            <div class="hero-map-container">
+              <div id="map" class="map"></div>
+              <!-- <div class="map-legend">
               <span class="legend-closed">❌ CLOSED</span>
               <span class="legend-open">✅ OPEN</span>
               <span class="legend-here">📍 YOUR ARE HERE</span>
             </div> -->
-          </div>
-        </section>
+            </div>
+          </section>
+        </div>
 
         <hr class="divider" />
 
         <section class="insurance-section">
           <div class="tabs-container">
             <button id="eu" class="tab-btn active">EU Health Insurance</button>
-            <button id="noneu" class="tab-btn inactive">Non-EU Health Insurance</button>
+            <button id="noneu" class="tab-btn inactive">
+              Non-EU Health Insurance
+            </button>
           </div>
           <div id="eucontent" class="tab-content">
             <p>
-              The EHIC allows anyone insured by a statutory health insurance
-              scheme in an EU member state, Iceland, Liechtenstein, Norway, or
-              Switzerland to access medically necessary, state-provided
-              healthcare during a temporary stay.
+              The EHIC allows anyone insured by a statutory health insurance scheme in an EU member state, Iceland, Liechtenstein, Norway, or Switzerland to access medically necessary, state-provided healthcare during a temporary stay. This ensures you can safely continue your holiday, studies, or business trip without having to cut your stay short to return home for medical treatment.
             </p>
             <div class="features-box">
               <strong>Key Features:</strong>
               <ul>
                 <li>
-                  <strong>Coverage:</strong> It provides treatment under the
-                  same conditions and at the same cost (free in some countries)
-                  as people insured in that country.
+                  <strong>Equal Coverage:</strong> It provides treatment under the same conditions and at the same cost (which is free in some countries) as people insured in that host country. This includes provision of treatment for chronic or pre-existing conditions that become necessary during your visit, as well as routine maternity care.
                 </li>
                 <li>
-                  <strong>Limitations:</strong> It is not a substitute for
-                  travel insurance. It does not cover private healthcare or
-                  costs such as mountain rescue or being flown back to your home
-                  country.
+                  <strong>Important Limitations:</strong> The EHIC is not a substitute for comprehensive travel insurance. It does not cover private healthcare providers, nor does it cover external emergency costs such as mountain rescue in ski resorts, lost property, or repatriation (being flown back to your home country).
                 </li>
                 <li>
-                  <strong>Validity:</strong> It only covers state-funded
-                  providers and is intended for short-term stays (like tourism
-                  or exchange programs).
+                  <strong>Validity & Scope:</strong> It only covers state-funded providers and is strictly intended for short-term stays (such as tourism, business trips, or temporary exchange programs). It does not cover your costs if you are traveling for the express purpose of obtaining medical treatment abroad.
                 </li>
               </ul>
             </div>
           </div>
-          <div id="noneucontent" class="tab-content" style="display:none">
-            <p>
-              TTELKTJLKESKJTSLKETSOIETHGWUIGORHBNGIBWRGUI
-            </p>
+          <div id="noneucontent" class="tab-content" style="display: none">
+            <p>For non-EU/EEA citizens residing in Ireland, holding a valid private health insurance policy is often a mandatory requirement for immigration registration and securing your visa. Even when not strictly required, it is highly recommended, as non-EU nationals may not be fully eligible for free or subsidized state healthcare services.</p>
             <div class="features-box">
               <strong>Key Features:</strong>
               <ul>
                 <li>
-                  <strong>Coverage:</strong> It provides treatment under the
-                  same conditions and at the GIUHHREIUHUIRUIGHGHUIIHUHUIHU(IHUIHU*IHUIHUIUI HUIHUIHUIHUIHIUHGHUIGUIGYUGYUIGYUI) cost (free in some countries)
-                  as people insured in that country.
+                  <strong>Immigration Compliance:</strong> A basic private medical insurance policy is typically required for international students and workers to ensure they have access to necessary medical care without relying solely on the public health system.
                 </li>
                 <li>
-                  <strong>Limitations:</strong> It is not a substitute for
-                  travel insurance. It does not cover private healthcare or
-                  costs such as mountain rescue or being flown back to your home
-                  country.
+                  <strong>Coverage Variations:</strong> Insurance plans range from basic emergency cover (for hospital inpatient stays) to comprehensive plans that include day-to-day medical expenses such as General Practitioner (GP) visits, dental care, eye tests, and physiotherapy.
                 </li>
                 <li>
-                  <strong>Validity:</strong> It only covers state-funded
-                  providers and is intended for short-term stays (like tourism
-                  or exchange programs).
+                  <strong>Limitations & Waiting Periods:</strong> Most private policies enforce strict waiting periods for pre-existing medical conditions and maternity care. It is crucial to review your policy details carefully to understand what is excluded during your first year of coverage.
                 </li>
               </ul>
             </div>
@@ -145,8 +128,8 @@
     <template id="search-result-template">
       <a href="#"></a>
     </template>
-  <script src="homepagemap.js"></script>
-  <script src="content.js"></script>
-  <script src="search.js"></script>
+    <script src="homepagemap.js"></script>
+    <script src="content.js"></script>
+    <script src="search.js"></script>
   </body>
 </html>

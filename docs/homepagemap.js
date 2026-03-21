@@ -1,5 +1,18 @@
 //Declare the Map
 let map = L.map("map").setView([53.33977105427492, -6.2949987583892755], 5);
+//Declare Icons
+let openIcon = L.icon({
+    iconUrl: 'images/open_location_logo.png',
+    iconSize:     [80, 80], // size of the icon
+    iconAnchor:   [45, 50], // point of the icon which will correspond to marker's location
+    popupAnchor:  [1, -40]
+})
+let closedIcon = L.icon({
+    iconUrl: 'images/close_location_logo.png',
+    iconSize:     [80, 80], // size of the icon
+    iconAnchor:   [34, 50], // point of the icon which will correspond to marker's location
+    popupAnchor:  [1, -40]
+})
 //Declare array for markers and hospital times
 let markers = []
 let hospitalTimes = []
@@ -31,8 +44,13 @@ fetch("./hospitals.json").then((response) => {
     //Loop through all hospitals
     for(let i = 0; i < data.hospitals.length; i++){
         console.log(i)
-        //Add new marker to map with lat and lon of hospital
-        markers.push(L.marker([data.hospitals[i].lat, data.hospitals[i].lon]).addTo(map))
+        //Add new marker to map with lat and lon of hospital. Change the icon depending on if hospital is open or closed.
+        hospitalTimes.push([data.hospitals[i].hours.opening, data.hospitals[i].hours.closing])
+        if(timestamp > hospitalTimes[i][0] && timestamp < hospitalTimes[i][1])
+            markers.push(L.marker([data.hospitals[i].lat, data.hospitals[i].lon], {icon: openIcon}).addTo(map))
+        else{
+            markers.push(L.marker([data.hospitals[i].lat, data.hospitals[i].lon], {icon: closedIcon}).addTo(map))
+        }
         //Create HTML for Popup (Link to hospital page whilst sending hospital index, display opening hours, hospital website.)
         markers[i].bindPopup("<b><a href='./hospital_page.html?hospital_id=" + i + "'>" + data.hospitals[i].name + "</a></b><br>" + data.hospitals[i].hours.opening + " - " + data.hospitals[i].hours.closing + "<br>" + data.hospitals[i].website).openPopup();
         //Add opening hours to seperate array, used for finding closest hospital.

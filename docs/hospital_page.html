@@ -3,61 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Detail - Dublin Medical Hub</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>St. James's Hospital - Dublin Medical Hub</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="container">
-    <header>
-        <div class="logo-text">Dublin Medical Hub</div>
-        <div class="nav-tools">
-            <span>Language</span> | <span>Settings</span>
+    <header class="hero-header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="images/logo.jpeg" alt="Logo" class="header-logo">
+                <span class="logo-text">Dublin Medical Hub</span>
+            </div>
+            <div class="nav-links">
+                <a href="#">Language</a>
+                <a href="#">Settings</a>
+            </div>
         </div>
     </header>
 
-    <hr>
+    <nav style="padding: 1rem 3rem;">
+        <a href="index.html" style="text-decoration: none; color: #14591d; font-weight: 600;">← Back to Overview</a>
+    </nav>
 
-    <section class="hero">
-        <div class="hero-left">
-            <div class="image-placeholder">
-                Hospital Image Placeholder
+    <section class="hero-section" style="padding: 0 3rem;">
+        <div class="hero-map-container">
+            <div class="hospital-image-container">
+                <img src="images/stjames.jpg" alt="St. James's Hospital" id="hospital-img">
             </div>
         </div>
 
-        <div class="hero-right">
-            <h1 id="name">General Hospital Name</h1>
-            <p><strong>Address:</strong> <em id="address">12345678</em></p>
-            <p><strong>Phone:</strong> <em id="phone">+353 1 234 5678</em></p>
-            <p><strong>Website:</strong> <a id="website" href="#">www.hospitalwebsite.ie</a></p>
+        <div class="hero-text">
+            <h2 id="name">St. James's Hospital</h2>
+            <p>
+                <strong>Address:</strong> <span id="address">James's St, Saint James', Dublin 8</span><br>
+                <strong>Phone:</strong> <span id="phone">+353 1 410 3000</span><br>
+                <strong>Website:</strong> <a id="website" href="https://www.stjames.ie" target="_blank" style="color: #14591d;">www.stjames.ie</a>
+            </p>
             
-            <div class="opening-hours">
-                <h3>Opening Hours</h3>
-                <p id="hours">Monday - Friday: 08:00 - 20:00</p>
-                <p>Saturday - Sunday: 10:00 - 18:00</p>
-                <p style="color: #f84141; font-weight: bold;">Emergency: 24/7</p>
+            <div class="features-box">
+                <strong>Opening Hours</strong>
+                <ul>
+                    <li>Monday - Friday: 08:00 - 20:00</li>
+                    <li>Saturday - Sunday: 10:00 - 18:00</li>
+                    <li class="legend-closed">Emergency Department: 24/7 Open</li>
+                </ul>
             </div>
+            
+            <button class="btn-emergency">Emergency</button>
         </div>
     </section>
 
-    <hr>
+    <hr class="divider">
 
-    <footer>
-        <div>
-            Home / About Us<br>
-            Hospital Directory
+    <footer style="padding: 0 3rem 2rem 3rem;">
+        <div class="footer-col">
+            <a href="#">Home / About Us</a>
+            <a href="#">Hospital Directory</a>
         </div>
-        <div>
-            Insurance Guide<br>
-            Emergency Contacts
+        <div class="footer-col">
+            <a href="#">Insurance Guide (EHIC)</a>
+            <a href="#">Emergency Contacts</a>
         </div>
-        <div>
-            Privacy Policy<br>
-            Terms of Service
+        <div class="footer-col">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
         </div>
     </footer>
-    
 </div>
+
 <script src="fillcontent.js"></script>
 </body>
 </html>

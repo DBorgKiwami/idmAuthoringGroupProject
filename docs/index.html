@@ -18,118 +18,152 @@
     ></script>
   </head>
   <body>
-      <header class="hero-header">
-        <div class="header-overlay"></div>
-        <div class="header-content">
-          <div class="logo-container">
-            <img src="images/logo.jpeg" alt="Logo" class="header-logo" />
-            <h1 class="logo-text">Dublin Medical Hub</h1>
-          </div>
-          <div class="header-controls">
-            <div class="search-bar">
-              <input type="text" placeholder="Search..." id="search-bar" />
-              <button class="search-btn" aria-label="Search"></button>
-              <div id="search-output" class="search-result-container"></div>
-            </div>
-          </div>
-          <div class="nav-links">
-            <a href="#">Language</a>
-            <a href="#">Settings</a>
-          </div>
+    <header class="hero-header">
+      <div class="header-overlay"></div>
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="images/logo.jpeg" alt="Logo" class="header-logo" />
+          <h1 class="logo-text">Dublin Medical Hub</h1>
         </div>
-      </header>
-
-      <main>
-        <section class="hero-section">
-          <div class="hero-text">
-            <h2>Immediate Care When Every Second Counts</h2>
-            <p>
-              Our Emergency Department provides 24/7 critical support for
-              life-threatening conditions and acute injuries. If you are
-              experiencing a medical emergency, please dial 999 or 112
-              immediately or proceed to our emergency entrance.
-            </p>
-            <button id="emergency" class="btn-emergency">EMERGENCY</button>
-          </div>
-          <div class="hero-map-container">
-            <div id="map" class="map">
-            </div>
-            <div class="hero-map-container">
-              <div id="map" class="map"></div>
-              <!-- <div class="map-legend">
-              <span class="legend-closed">❌ CLOSED</span>
-              <span class="legend-open">✅ OPEN</span>
-              <span class="legend-here">📍 YOUR ARE HERE</span>
-            </div> -->
-            </div>
-          </section>
-        </div>
-
-        <hr class="divider" />
-
-        <section class="insurance-section">
-          <div class="tabs-container">
-            <button id="eu" class="tab-btn active">EU Health Insurance</button>
-            <button id="noneu" class="tab-btn inactive">
-              Non-EU Health Insurance
+        <div class="header-controls">
+          <div class="search-bar">
+            <input type="text" placeholder="Search..." id="search-bar" />
+            <button class="search-btn" aria-label="Search">
+              <img src="images/Search.png" alt="Search" class="btn-icon" />
             </button>
+            <div id="search-output" class="search-result-container"></div>
           </div>
-          <div id="eucontent" class="tab-content">
-            <p>
-              The EHIC allows anyone insured by a statutory health insurance scheme in an EU member state, Iceland, Liechtenstein, Norway, or Switzerland to access medically necessary, state-provided healthcare during a temporary stay. This ensures you can safely continue your holiday, studies, or business trip without having to cut your stay short to return home for medical treatment.
-            </p>
-            <div class="features-box">
-              <strong>Key Features:</strong>
-              <ul>
-                <li>
-                  <strong>Equal Coverage:</strong> It provides treatment under the same conditions and at the same cost (which is free in some countries) as people insured in that host country. This includes provision of treatment for chronic or pre-existing conditions that become necessary during your visit, as well as routine maternity care.
-                </li>
-                <li>
-                  <strong>Important Limitations:</strong> The EHIC is not a substitute for comprehensive travel insurance. It does not cover private healthcare providers, nor does it cover external emergency costs such as mountain rescue in ski resorts, lost property, or repatriation (being flown back to your home country).
-                </li>
-                <li>
-                  <strong>Validity & Scope:</strong> It only covers state-funded providers and is strictly intended for short-term stays (such as tourism, business trips, or temporary exchange programs). It does not cover your costs if you are traveling for the express purpose of obtaining medical treatment abroad.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div id="noneucontent" class="tab-content" style="display: none">
-            <p>For non-EU/EEA citizens residing in Ireland, holding a valid private health insurance policy is often a mandatory requirement for immigration registration and securing your visa. Even when not strictly required, it is highly recommended, as non-EU nationals may not be fully eligible for free or subsidized state healthcare services.</p>
-            <div class="features-box">
-              <strong>Key Features:</strong>
-              <ul>
-                <li>
-                  <strong>Immigration Compliance:</strong> A basic private medical insurance policy is typically required for international students and workers to ensure they have access to necessary medical care without relying solely on the public health system.
-                </li>
-                <li>
-                  <strong>Coverage Variations:</strong> Insurance plans range from basic emergency cover (for hospital inpatient stays) to comprehensive plans that include day-to-day medical expenses such as General Practitioner (GP) visits, dental care, eye tests, and physiotherapy.
-                </li>
-                <li>
-                  <strong>Limitations & Waiting Periods:</strong> Most private policies enforce strict waiting periods for pre-existing medical conditions and maternity care. It is crucial to review your policy details carefully to understand what is excluded during your first year of coverage.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        </div>
+        <div class="nav-links">
+          <a href="#">
+            <img src="images/Language.png" alt="Language" class="nav-icon" />
+            <span>Language</span>
+          </a>
+          <a href="#">
+            <img src="images/Settings.png" alt="Settings" class="nav-icon" />
+            <span>Settings</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="hero-text">
+          <h2>Immediate Care When Every Second Counts</h2>
+          <p>
+            Our Emergency Department provides 24/7 critical support for
+            life-threatening conditions and acute injuries. If you are
+            experiencing a medical emergency, please dial 999 or 112 immediately
+            or proceed to our emergency entrance.
+          </p>
+          <button id="emergency" class="btn-emergency">EMERGENCY</button>
+        </div>
+        <div class="hero-map-container">
+          <div id="map" class="map"></div>
+        </div>
+      </section>
+      <hr class="divider" />
 
-        <hr class="divider" />
-      </main>
+      <section class="insurance-section">
+        <div class="tabs-container">
+          <button id="eu" class="tab-btn active">EU Health Insurance</button>
+          <button id="noneu" class="tab-btn inactive">
+            Non-EU Health Insurance
+          </button>
+        </div>
+        <div id="eucontent" class="tab-content">
+          <p>
+            The EHIC allows anyone insured by a statutory health insurance
+            scheme in an EU member state, Iceland, Liechtenstein, Norway, or
+            Switzerland to access medically necessary, state-provided healthcare
+            during a temporary stay. This ensures you can safely continue your
+            holiday, studies, or business trip without having to cut your stay
+            short to return home for medical treatment.
+          </p>
+          <div class="features-box">
+            <strong>Key Features:</strong>
+            <ul>
+              <li>
+                <strong>Equal Coverage:</strong> It provides treatment under the
+                same conditions and at the same cost (which is free in some
+                countries) as people insured in that host country. This includes
+                provision of treatment for chronic or pre-existing conditions
+                that become necessary during your visit, as well as routine
+                maternity care.
+              </li>
+              <li>
+                <strong>Important Limitations:</strong> The EHIC is not a
+                substitute for comprehensive travel insurance. It does not cover
+                private healthcare providers, nor does it cover external
+                emergency costs such as mountain rescue in ski resorts, lost
+                property, or repatriation (being flown back to your home
+                country).
+              </li>
+              <li>
+                <strong>Validity & Scope:</strong> It only covers state-funded
+                providers and is strictly intended for short-term stays (such as
+                tourism, business trips, or temporary exchange programs). It
+                does not cover your costs if you are traveling for the express
+                purpose of obtaining medical treatment abroad.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="noneucontent" class="tab-content" style="display: none">
+          <p>
+            For non-EU/EEA citizens residing in Ireland, holding a valid private
+            health insurance policy is often a mandatory requirement for
+            immigration registration and securing your visa. Even when not
+            strictly required, it is highly recommended, as non-EU nationals may
+            not be fully eligible for free or subsidized state healthcare
+            services.
+          </p>
+          <div class="features-box">
+            <strong>Key Features:</strong>
+            <ul>
+              <li>
+                <strong>Immigration Compliance:</strong> A basic private medical
+                insurance policy is typically required for international
+                students and workers to ensure they have access to necessary
+                medical care without relying solely on the public health system.
+              </li>
+              <li>
+                <strong>Coverage Variations:</strong> Insurance plans range from
+                basic emergency cover (for hospital inpatient stays) to
+                comprehensive plans that include day-to-day medical expenses
+                such as General Practitioner (GP) visits, dental care, eye
+                tests, and physiotherapy.
+              </li>
+              <li>
+                <strong>Limitations & Waiting Periods:</strong> Most private
+                policies enforce strict waiting periods for pre-existing medical
+                conditions and maternity care. It is crucial to review your
+                policy details carefully to understand what is excluded during
+                your first year of coverage.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-      <footer>
-        <div class="footer-col">
-          <a href="#">Home / About Us</a>
-          <a href="#">Hospital Directory</a>
-        </div>
-        <div class="footer-col">
-          <a href="#">Insurance Guide (EHIC)</a>
-          <a href="#">Emergency Contacts</a>
-        </div>
-        <div class="footer-col">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
-      </footer>
-    </div>
+      <hr class="divider" />
+    </main>
+
+    <footer>
+      <div class="footer-col">
+        <a href="#">Home / About Us</a>
+        <a href="#">Hospital Directory</a>
+      </div>
+      <div class="footer-col">
+        <a href="#">Insurance Guide (EHIC)</a>
+        <a href="#">Emergency Contacts</a>
+      </div>
+      <div class="footer-col">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </footer>
+
     <template id="search-result-template">
       <a href="#"></a>
     </template>

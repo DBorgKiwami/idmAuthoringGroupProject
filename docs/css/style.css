@@ -97,13 +97,14 @@ body {
 .search-bar {
   display: grid;
   grid-template-columns: 1fr auto;
-  background-color: #ffffffcc;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  border: 1px solid #14591d;
-  border-radius: 25px;
-  padding: 5px 20px;
-  box-shadow: 0 4px 12px #0000001a;
-  margin: 20px;
+  border: 1.5px solid var(--brand-color);
+  border-radius: 30px;
+  padding: 6px 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 10px;
 }
 
 .search-result-container {
@@ -125,28 +126,25 @@ body {
   color: #33333399;
 }
 
-/* add search icon as a sprite image */
 .search-btn {
   border: none;
   background-color: transparent;
-  padding: 0;
+  padding: 0 4px;
   cursor: pointer;
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--brand-color);
 }
-
-.search-btn {
-  width: 40px;
-  height: 40px;
-  background-image: url("../images/Other\ Icon.png");
-  background-repeat: no-repeat;
-  background-position: -20px -120px;
-  background-size: auto;
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
-
-/* .search-bar button:hover {
-  background-color: #0b3b16;
-} */
 
 .nav-links {
   display: flex;
@@ -159,6 +157,19 @@ body {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover {
+  color: var(--brand-color);
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 .hero-section {
@@ -192,19 +203,18 @@ body {
 }
 
 .hospital-image-container {
-    width: 100%;
-    border-radius: 20px;
-    overflow: hidden; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
-    max-height: 400px; 
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  max-height: 400px;
 }
 
-
 #hospital-img {
-    width: 100%;
-    height: 100%;       
-    object-fit: cover;  
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .btn-emergency {

@@ -1,7 +1,7 @@
 {
 "hospitals":[
-    {"lat":53.33977105427492, "lon":-6.2949987583892755, "name":"St James' Hospital", "hours": {"opening": 1000, "closing": 1800}, "website":"www.google.com"},
-    {"lat":53.29132754809115, "lon":-6.378530200719999, "name":"Tallaght University Hospital", "hours": {"opening": 1000, "closing": 1800}, "website":"www.google.com"},
-    {"lat":53.43977105427492, "lon":-6.3049987583892755, "name":"St Mario's Big Suprise", "hours": {"opening": 1000, "closing": 1800}, "website":"www.google.com"}
+    {"lat":53.33977105427492, "lon":-6.2949987583892755, "name":"St James' Hospital", "hours": {"opening": 1000, "closing": 1800}, "website":"https://www.stjames.ie/", "image":"stjames.jpg", "address":"James's St, Saint James, Dublin 8, D08 NHY1", "phone":"(01) 410 3000", "attributions":"Debbiesw, CC0, via Wikimedia Commons"},
+    {"lat":53.29132754809115, "lon":-6.378530200719999, "name":"Tallaght University Hospital", "hours": {"opening": 1000, "closing": 1800}, "website":"https://www.tuh.ie/", "image":"tallaght.jpg", "address":"Tallaght, Dublin, D24 NR0A", "phone":"(01) 414 2000", "attributions":"damien_farrell, CC BY 2.0 <https://creativecommons.org/licenses/by/2.0>, via Wikimedia Commons"},
+    {"lat":53.34431570848385, "lon":-6.29180921655587, "name":"St Patrick's University Hospital", "hours": {"opening": 1000, "closing": 1800}, "website":"https://www.stpatricks.ie/", "image":"stpatricks.jpg", "address":"Steeven's Lane, James's St, Saint James, Dublin 8, D08 K7YW", "phone":"(01) 249 3200", "attributions":"Deirdre.dennehy, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons"}
 ]
 }

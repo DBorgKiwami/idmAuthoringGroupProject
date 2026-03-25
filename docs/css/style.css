@@ -252,12 +252,28 @@ section[id] {
 }
 
 .hospital-image-container {
+  position: relative;
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   max-height: 400px;
 }
+
+#hospital-attribution {
+    position: absolute;
+    bottom: 10px;    
+    right: 10px;     
+    z-index: 10;     
+    background: rgba(0, 0, 0, 0.6); 
+    color: white !important;        
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 8px;
+    pointer-events: none; 
+    display: block !important; 
+}
+
 
 #hospital-img {
   width: 100%;

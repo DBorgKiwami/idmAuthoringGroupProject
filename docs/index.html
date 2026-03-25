@@ -20,6 +20,7 @@
   <body>
     <header class="hero-header">
       <div class="header-overlay"></div>
+
       <div class="header-content">
         <div class="logo-container">
           <img src="images/logo.jpeg" alt="Logo" class="header-logo" />
@@ -45,10 +46,17 @@
           </a>
         </div>
       </div>
+
+      <nav class="bottom-nav">
+        <a href="#hero-text" class="active">Emergency</a>
+        <a href="#insurance-section">Health Insurance</a>
+        <a href="#gp-registration">GP Registration</a>
+      </nav>
     </header>
-    <main>
+
+    <main class="container">
       <section class="hero-section">
-        <div class="hero-text">
+        <div class="hero-text" id="hero-text">
           <h2>Immediate Care When Every Second Counts</h2>
           <p>
             Our Emergency Department provides 24/7 critical support for
@@ -62,9 +70,10 @@
           <div id="map" class="map"></div>
         </div>
       </section>
+
       <hr class="divider" />
 
-      <section class="insurance-section">
+      <section class="insurance-section" id="insurance-section">
         <div class="tabs-container">
           <button id="eu" class="tab-btn active">EU Health Insurance</button>
           <button id="noneu" class="tab-btn inactive">
@@ -142,6 +151,48 @@
                 your first year of coverage.
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+      <!-- gp-registration -->
+      <section id="gp-registration" class="guide-section">
+        <h2 class="section-title">How to Register with a GP</h2>
+        <p class="section-desc">
+          A General Practitioner (GP) is your first point of contact for
+          non-emergency medical care in Ireland. Here is how to register:
+        </p>
+
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Find Local Clinics</h3>
+            <p>
+              Search for GP clinics in your neighborhood using Google Maps. It
+              is best to choose one close to your home or daily commute for easy
+              access.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Check Availability</h3>
+            <p>
+              Call the clinics directly. Ask if they are accepting "new
+              public/private patients". Note: Many clinics currently have
+              waiting lists, so you may need to call several.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Complete Registration</h3>
+            <p>
+              Once accepted, visit the clinic to fill out a registration form.
+              Bring a valid photo ID and a recent proof of address (like a
+              utility bill or bank statement).
+            </p>
           </div>
         </div>
       </section>

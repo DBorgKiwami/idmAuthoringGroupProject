@@ -1,51 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<div class="container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Directory</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </head>
+  <body>
     <header class="hero-header">
-        <div class="header-overlay"></div>
-        <div class="header-content">
-            <div class="logo-container">
-                <img src="images/logo.jpeg" alt="Logo" class="header-logo">
-                <span class="logo-text">Dublin Medical Hub</span>
-            </div>
-            <div class="nav-links">
-                <a href="#">Language</a>
-                <a href="#">Settings</a>
-            </div>
+      <div class="header-overlay"></div>
+
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="images/logo.jpeg" alt="Logo" class="header-logo" />
+          <h1 class="logo-text">Hospital Directory</h1>
         </div>
+        <div class="header-controls">
+          <div class="search-bar">
+            <input type="text" placeholder="Search..." id="search-bar" />
+            <button class="search-btn" aria-label="Search">
+              <img src="images/Search.png" alt="Search" class="btn-icon" />
+            </button>
+            <div id="search-output" class="search-result-container"></div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#">
+            <img src="images/Language.png" alt="Language" class="nav-icon" />
+            <span>Language</span>
+          </a>
+          <a href="#">
+            <img src="images/setting.png" alt="Settings" class="nav-icon2" />
+            <span>Settings</span>
+          </a>
+        </div>
+      </div>
     </header>
+      <section class="hero-section" style="padding: 0 3rem">
+        <ul id="hospitaldirectory"></ul>
+      </section>
 
-    <section class="hero-section" style="padding: 0 3rem;">
-        <ul id="hospitaldirectory">
-        </ul>
-    </section>
+      <hr class="divider" />
 
-    <hr class="divider">
-
-    <footer style="padding: 0 3rem 2rem 3rem;">
+      <footer style="padding: 0 3rem 2rem 3rem">
         <div class="footer-col">
-            <a href="#">Home / About Us</a>
-            <a href="#">Hospital Directory</a>
+          <a href="#">Home / About Us</a>
+          <a href="#">Hospital Directory</a>
         </div>
         <div class="footer-col">
-            <a href="#">Insurance Guide (EHIC)</a>
-            <a href="#">Emergency Contacts</a>
+          <a href="#">Insurance Guide (EHIC)</a>
+          <a href="#">Emergency Contacts</a>
         </div>
         <div class="footer-col">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
         </div>
-    </footer>
-</div>
+      </footer>
+    </div>
 
-<script src="directory.js"></script>
-</body>
+    <script src="directory.js"></script>
+  </body>
 </html>

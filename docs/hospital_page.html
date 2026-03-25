@@ -16,6 +16,15 @@
                 <img src="images/logo.jpeg" alt="Logo" class="header-logo">
                 <span class="logo-text">Dublin Medical Hub</span>
             </div>
+            <div class="header-controls">
+          <div class="search-bar">
+            <input type="text" placeholder="Search..." id="search-bar" />
+            <button class="search-btn" aria-label="Search">
+              <img src="images/Search.png" alt="Search" class="btn-icon" />
+            </button>
+            <div id="search-output" class="search-result-container"></div>
+          </div>
+        </div>
             <div class="nav-links">
                 <a href="#">Language</a>
                 <a href="#">Settings</a>
@@ -29,17 +38,18 @@
 
     <section class="hero-section" style="padding: 0 3rem;">
         <div class="hero-map-container">
-            <div class="hospital-image-container">
-                <img alt="St. James's Hospital" id="hospital-img">
+            <div class="hospital-image-container" style="position: relative;">
+                <img alt="Hospital Image" id="hospital-img">
+                <div id="hospital-attribution" class="image-attribution">Photo Source</div>
             </div>
         </div>
 
         <div class="hero-text">
             <h2 id="name">St. James's Hospital</h2>
             <p>
-                <strong>Address:</strong> <span id="address">James's St, Saint James', Dublin 8</span><br>
-                <strong>Phone:</strong> <span id="phone">+353 1 410 3000</span><br>
-                <strong>Website:</strong> <a id="website" href="https://www.stjames.ie" target="_blank" style="color: #14591d;">www.stjames.ie</a>
+                <strong>Address:</strong> <span id="address">Loading...</span><br>
+                <strong>Phone:</strong> <span id="phone">Loading...</span><br>
+                <strong>Website:</strong> <a id="website" href="#" target="_blank" style="color: #14591d;">Loading...</a>
             </p>
             
             <div class="features-box">

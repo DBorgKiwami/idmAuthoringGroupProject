@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St. James's Hospital - Dublin Medical Hub</title>
+    <title id="page-title">Hospital Detail - Dublin Medical Hub</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,14 +17,14 @@
                 <span class="logo-text">Dublin Medical Hub</span>
             </div>
             <div class="header-controls">
-          <div class="search-bar">
-            <input type="text" placeholder="Search..." id="search-bar" />
-            <button class="search-btn" aria-label="Search">
-              <img src="images/Search.png" alt="Search" class="btn-icon" />
-            </button>
-            <div id="search-output" class="search-result-container"></div>
-          </div>
-        </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search..." id="search-bar" />
+                    <button class="search-btn" aria-label="Search">
+                        <img src="images/Search.png" alt="Search" class="btn-icon" />
+                    </button>
+                    <div id="search-output" class="search-result-container"></div>
+                </div>
+            </div>
             <div class="nav-links">
                 <a href="#">Language</a>
                 <a href="#">Settings</a>
@@ -40,12 +40,12 @@
         <div class="hero-map-container">
             <div class="hospital-image-container" style="position: relative;">
                 <img alt="Hospital Image" id="hospital-img">
-                <div id="hospital-attribution" class="attribution">Photo Source</div>
+                <div id="hospital-attribution" class="image-attribution">Loading attribution...</div>
             </div>
         </div>
 
         <div class="hero-text">
-            <h2 id="name">St. James's Hospital</h2>
+            <h2 id="name">Loading Name...</h2>
             <p>
                 <strong>Address:</strong> <span id="address">Loading...</span><br>
                 <strong>Phone:</strong> <span id="phone">Loading...</span><br>
@@ -55,13 +55,13 @@
             <div class="features-box">
                 <strong>Opening Hours</strong>
                 <ul>
-                    <li id="hours">Monday - Friday: 08:00 - 20:00</li>
+                    <li id="hours">Loading hours...</li>
                     <li>Saturday - Sunday: 10:00 - 18:00</li>
                     <li class="legend-closed">Emergency Department: 24/7 Open</li>
                 </ul>
             </div>
             
-            <button class="btn-emergency">Emergency</button>
+            <button class="btn-emergency" id="call-btn">Emergency</button>
         </div>
     </section>
 
@@ -84,5 +84,31 @@
 </div>
 
 <script src="fillcontent.js"></script>
+
+<script>
+    fetch("./hospitals.json").then(res => res.json()).then(data => {
+        const h = data.hospitals[id];
+        if(h) {
+            
+            document.getElementById("page-title").innerText = h.name + " - Dublin Medical Hub";
+            
+            
+            document.getElementById("phone").innerText = h.phone;
+            
+           
+            const webLink = document.getElementById("website");
+            webLink.href = h.website;
+            
+            
+            const attr = document.getElementById("hospital-attribution");
+            if(attr) attr.innerText = h.attributions;
+
+            
+            document.getElementById("call-btn").onclick = () => {
+                window.location.href = "tel:" + h.phone;
+            };
+        }
+    });
+</script>
 </body>
 </html>
